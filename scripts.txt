@@ -1,0 +1,5 @@
+# Check docker container IPs
+docker ps -q | xargs -n 1 docker inspect --format '{{ .NetworkSettings.IPAddress }} {{ .Name }}' | sed 's/ \// /'
+
+# Test NGINX config file
+nginx -c /etc/nginx/nginx.conf -t
