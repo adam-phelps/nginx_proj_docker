@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  myproxy:
+    container_name: LB-NGINX
+    hostname: LB-NGINX
+    image: nginx:alpine
+    ports:
+      - 80:80
+    volumes:
+      - /home/robocop/nginx_proj_docker/configs:/etc/nginx
