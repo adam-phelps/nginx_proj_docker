@@ -1,2 +1,2 @@
 FROM nginx:alpine
-COPY my_nginx.conf /etc/nginx/nginx.conf
+COPY my_nginx_reverse_proxy.conf /etc/nginx/nginx.conf
